@@ -1,0 +1,190 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Hide horizontal scroll */
+    overflow-y: auto;   /* Enable vertical scroll */
+    width: 100%;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Navbar Styles */
+.main-nav {
+    background-color: #333;
+    padding: 1em;
+    color: #fff;
+}
+
+.company-logo img {
+    height: 50px;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+}
+
+.nav-item {
+    color: #fff;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-item:hover, .nav-item.active {
+    background-color: #ffd700;
+    color: #333;
+}
+
+/* Search Bar Styles */
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.news-input {
+    padding: 0.5em;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 200px;
+    transition: all 0.3s;
+}
+
+.news-input:focus {
+    outline: none;
+    border-color: #333;
+}
+
+.search-button {
+    padding: 0.5em 1em;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 0.5em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.search-button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.preferences-button {
+    background-color: #ffd700;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 10px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 1em;
+}
+
+#topics-list {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+
+#topics-list label {
+    display: block;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+#topics-list input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#savePreferences {
+    padding: 0.7em 1.5em;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#savePreferences:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+/* Card Styles */
+.cards-container {
+    display: flex; /* Use flex to align cards in a row */
+    flex-wrap: wrap; /* Allow cards to wrap into new lines */
+    justify-content: center; /* Center align cards in the container */
+    gap: 1em; /* Space between cards */
+    margin-top: 2em; /* Add space above cards */
+}
+
+.card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px; /* Set a fixed width */
+    transition: transform 0.3s;
+    cursor: pointer; /* Indicate clickable */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.cards-header img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 1em;
+}
+
+.news-source {
+    color: #777;
+    font-size: 0.8em;
+}

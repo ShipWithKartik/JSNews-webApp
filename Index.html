@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Latest News!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#" onclick="reload()" class="company-logo">
+                <img src="news.png" alt="company logo">
+            </a>
+            <div class="nav-links">
+                <ul class="flex" id="nav-links-list">
+
+                </ul>
+            </div>
+            <div class="search-bar">
+                <input type="text" class="news-input" id="news-input" placeholder="For e.g Science">
+                <button class="search-button" id="search-button">Search</button>
+            </div>
+            <button onclick="showPreferencesModal()" class="preferences-button">Change Preferences</button>
+        </div>
+    </nav>
+
+
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+
+        </div>
+
+        <template id="template-news-card">
+            <div class="card">
+                <div class="cards-header">
+                    <img src="https://via.placeholder.com/400x200" alt="Image" id="news-img">
+                </div>
+                <div class="card-content">
+                    <h3 id="news-title">This is the Title</h3>
+                    <h6 class="news-source" id="news-source">Source • Date</h6>
+                    <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet...</p>
+                </div>
+            </div>
+        </template>
+    </main>
+
+    <div id="preferencesModal" class="modal">
+        <div class="modal-content">
+            <h2>Select Your Preferred Topics</h2>
+            <div id="topics-list">
+
+                <label><input type="checkbox" value="Technology"> Technology</label><br>
+                <label><input type="checkbox" value="Finance"> Finance</label><br>
+                <label><input type="checkbox" value="Politics"> Politics</label><br>
+                <label><input type="checkbox" value="Science"> Science</label><br>
+                <label><input type="checkbox" value="Sports"> Sports</label><br>
+                <label><input type="checkbox" value="Health"> Health</label><br>
+            </div>
+            <button id="savePreferences">Save Preferences</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
